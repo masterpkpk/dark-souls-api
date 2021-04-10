@@ -5,12 +5,12 @@ class BossesController < ApplicationController
   def index
     @bosses = Boss.all
 
-    render json: @bosses
+    render json: @bosses, include: [:comments]
   end
 
   # GET /bosses/1
   def show
-    render json: @boss
+    render json: @boss, include: [:comments]
   end
 
   # POST /bosses
