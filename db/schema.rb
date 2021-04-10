@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_05_185633) do
+ActiveRecord::Schema.define(version: 2021_04_09_184311) do
 
   create_table "bosses", force: :cascade do |t|
     t.string "name"
@@ -19,6 +19,19 @@ ActiveRecord::Schema.define(version: 2021_04_05_185633) do
     t.string "immunity"
     t.string "parryable"
     t.string "optional"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "pic"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.string "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "boss_id"
+  end
+
+  create_table "jwt_denylists", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

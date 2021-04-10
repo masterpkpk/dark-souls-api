@@ -13,7 +13,8 @@ Boss.create(
   resistance: "Dark/Bleed",
   immunity: "Poison/Toxic",
   parryable: "YES",
-  optional: "NO"
+  optional: "NO",
+  pic: "../pics/Gundyr.png"
 )
 Boss.create(
   name: "Vordt of the Boreal Valley",
